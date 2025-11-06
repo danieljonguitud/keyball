@@ -31,9 +31,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   // Nav
   [1] = LAYOUT_universal(
-    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_LBRC  , KC_RBRC  , KC_LCBR  , KC_RCBR  ,
+    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_LCBR  , KC_RCRC  , KC_LPRN  , KC_LPRN  ,
     KC_LCTL  , KC_LALT  , KC_LGUI  , KC_LSFT  , KC_NO    ,                            KC_NO    , KC_LEFT  , KC_DOWN  , KC_UP    , KC_RIGHT ,
-    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_LBRC  , KC_DLR   , KC_PGDN  , KC_BTN3  , KC_F11   ,
+    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_LBRC  , KC_RBRC  , KC_LT    , KC_GT    ,
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,   KC_NO ,       KC_ENT,    KC_BSPC  , KC_NO    , KC_NO    , KC_NO    , KC_NO 
   ),
   // Media
@@ -60,8 +60,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Mouse
   [5] = LAYOUT_universal(
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
-    KC_LCTL  , KC_LALT  , KC_LGUI  , KC_LSFT  , KC_NO    ,                            KC_NO    ,KC_MS_BTN1,KC_MS_BTN2,KC_MS_BTN3, KC_NO    ,
-    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    ,KC_MS_BTN4,KC_MS_BTN5, KC_NO    , KC_NO    ,
+    KC_NO    , KC_NO    , KC_BTN2  , KC_BTN1  , KC_NO    ,                            KC_NO    , KC_RSFT  , KC_RGUI  , KC_RALT  , KC_RCTL  ,
+    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,      KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO
   ),
 };
