@@ -60,8 +60,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Mouse
   [5] = LAYOUT_universal(
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
-    KC_LCTL  , KC_LALT  , KC_LGUI  , KC_LSFT  , KC_NO    ,                            KC_NO    , MS_BTN1  , MS_BTN2  , MS_BTN3  , KC_NO    ,
-    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , MS_BTN4  , MS_BTN5  , KC_NO    , KC_NO    ,
+    KC_LCTL  , KC_LALT  , KC_LGUI  , KC_LSFT  , KC_NO    ,                            KC_NO    ,KC_MS_BTN1,KC_MS_BTN2,KC_MS_BTN3, KC_NO    ,
+    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    ,KC_MS_BTN4,KC_MS_BTN5, KC_NO    , KC_NO    ,
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,      KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO
   ),
 };
