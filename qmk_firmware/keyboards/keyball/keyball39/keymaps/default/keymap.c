@@ -60,8 +60,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Mouse
   [5] = LAYOUT_universal(
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
-    KC_LCTL  , KC_LALT  , KC_LGUI  , KC_LSFT  , KC_NO    ,                            KC_NO    , KC_BTN1  , KC_BTN2  , KC_BTN3  , KC_NO    ,
-    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_BTN4  , KC_BTN5  , KC_NO    , KC_NO    ,
+    KC_LCTL  , KC_LALT  , KC_LGUI  , KC_LSFT  , KC_NO    ,                            KC_NO    , MS_BTN1  , MS_BTN2  , MS_BTN3  , KC_NO    ,
+    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , MS_BTN4  , MS_BTN5  , KC_NO    , KC_NO    ,
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,      KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO
   ),
 };
@@ -73,7 +73,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
-const uint16_t PROGMEM esc[] = {KC_A, KC_O, COMBO_END};
+const uint16_t PROGMEM esc[] = {LCTL_T(KC_A), RCTL_T(KC_O), COMBO_END};
 combo_t key_combos[] = {
     COMBO(esc, KC_ESC),
 };
