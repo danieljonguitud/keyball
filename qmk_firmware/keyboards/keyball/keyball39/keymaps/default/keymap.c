@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   // Nav
   [1] = LAYOUT_universal(
-    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_LCBR  , KC_RCRC  , KC_LPRN  , KC_LPRN  ,
+    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_LCBR  , KC_RCBR  , KC_LPRN  , KC_LPRN  ,
     KC_LCTL  , KC_LALT  , KC_LGUI  , KC_LSFT  , KC_NO    ,                            KC_NO    , KC_LEFT  , KC_DOWN  , KC_UP    , KC_RIGHT ,
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_LBRC  , KC_RBRC  , KC_LT    , KC_GT    ,
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,   KC_NO ,       KC_ENT,    KC_BSPC  , KC_NO    , KC_NO    , KC_NO    , KC_NO 
