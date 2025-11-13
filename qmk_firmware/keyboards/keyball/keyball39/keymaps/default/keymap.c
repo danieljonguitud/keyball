@@ -27,14 +27,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q     , KC_W     , KC_F     , KC_P     , KC_B     ,                            KC_J     , KC_L     , KC_U     , KC_Y     , KC_QUOT  ,
     LCTL_T(KC_A),LALT_T(KC_R),LGUI_T(KC_S),LSFT_T(KC_T),KC_G,                         KC_M,RSFT_T(KC_N),RGUI_T(KC_E),RALT_T(KC_I),RCTL_T(KC_O),
     KC_Z     , KC_X     , KC_C     , KC_D     , KC_V     ,                            KC_K     , KC_H     , KC_COMM  , KC_DOT   , KC_SLSH  ,
-    KC_NO    , KC_NO  ,KC_NO,LT(2,KC_CAPS_LOCK),LT(1,KC_SPC),KC_TAB,       LT(4, KC_ENT), LT(3,KC_BSPC),KC_NO, KC_NO , KC_NO    , KC_A
+    KC_NO    , KC_NO  ,KC_NO,LT(2,KC_CAPS_LOCK),LT(5,KC_SPC),KC_TAB,       LT(4, KC_ENT), LT(3,KC_BSPC),KC_NO, KC_NO , KC_NO    , KC_A
   ),
-  // Nav
+  // Mouse
   [1] = LAYOUT_universal(
-    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_LCBR  , KC_RCBR  , KC_LPRN  , KC_LPRN  ,
-    KC_LCTL  , KC_LALT  , KC_LGUI  , KC_LSFT  , KC_NO    ,                            KC_NO    , KC_LEFT  , KC_DOWN  , KC_UP    , KC_RIGHT ,
-    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_LBRC  , KC_RBRC  , KC_LT    , KC_GT    ,
-    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,   KC_NO ,       KC_ENT,    KC_BSPC  , KC_NO    , KC_NO    , KC_NO    , KC_NO 
+    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
+    KC_NO    , KC_NO    , KC_BTN2  , KC_BTN1  , KC_NO    ,                            KC_NO    , KC_RSFT  , KC_RGUI  , KC_RALT  , KC_RCTL  ,
+    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
+    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,      KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO
   ),
   // Media
   [2] = LAYOUT_universal(
@@ -57,19 +57,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TILD  , KC_EXLM  , KC_AT    , KC_HASH  , KC_PIPE  ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
       KC_NO    , KC_NO    , KC_NO    , KC_LPRN  , KC_RPRN  , KC_UNDS  ,      KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO
   ),
-  // Mouse
+  // Nav
   [5] = LAYOUT_universal(
-    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
-    KC_NO    , KC_NO    , KC_BTN2  , KC_BTN1  , KC_NO    ,                            KC_NO    , KC_RSFT  , KC_RGUI  , KC_RALT  , KC_RCTL  ,
-    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
-    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,      KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO
+    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_LCBR  , KC_RCBR  , KC_LPRN  , KC_LPRN  ,
+    KC_LCTL  , KC_LALT  , KC_LGUI  , KC_LSFT  , KC_NO    ,                            KC_NO    , KC_LEFT  , KC_DOWN  , KC_UP    , KC_RIGHT ,
+    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_LBRC  , KC_RBRC  , KC_LT    , KC_GT    ,
+    KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,   KC_NO ,       KC_ENT,    KC_BSPC  , KC_NO    , KC_NO    , KC_NO    , KC_NO 
   ),
 };
 // clang-format on
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    // Auto enable scroll mode when the highest layer is 1 (Nav)
-    keyball_set_scroll_mode(get_highest_layer(state) == 1);
+    // Auto enable scroll mode when the highest layer is 5 (Nav)
+    keyball_set_scroll_mode(get_highest_layer(state) == 5);
     return state;
 }
 
