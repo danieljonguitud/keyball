@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LCBR  , KC_AMPR  , KC_ASTR  , KC_LPRN  , KC_RCBR  ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
     KC_COLN  , KC_DLR   , KC_PERC  , KC_CIRC  , KC_PLUS  ,                            KC_NO    , KC_RSFT  , KC_RGUI  , KC_RALT  , KC_RCTL  ,
     KC_TILD  , KC_EXLM  , KC_AT    , KC_HASH  , KC_PIPE  ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
-    KC_NO    , KC_NO    , KC_NO    , KC_RPRN  , KC_LPRN  , KC_UNDS  ,      KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO
+      KC_NO    , KC_NO    , KC_NO    , KC_LPRN  , KC_RPRN  , KC_UNDS  ,      KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO
   ),
   // Mouse
   [5] = LAYOUT_universal(
@@ -77,10 +77,6 @@ const uint16_t PROGMEM esc[] = {LCTL_T(KC_A), RCTL_T(KC_O), COMBO_END};
 combo_t key_combos[] = {
     COMBO(esc, KC_ESC),
 };
-
-void pointing_device_init_user(void) {
-    set_auto_mouse_enable(true);
-}
 
 #ifdef OLED_ENABLE
 
