@@ -27,12 +27,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q     , KC_W     , KC_F     , KC_P     , KC_B     ,                            KC_J     , KC_L     , KC_U     , KC_Y     , KC_QUOT  ,
     LCTL_T(KC_A),LALT_T(KC_R),LGUI_T(KC_S),LSFT_T(KC_T),KC_G,                         KC_M,RSFT_T(KC_N),RGUI_T(KC_E),RALT_T(KC_I),RCTL_T(KC_O),
     KC_Z     , KC_X     , KC_C     , KC_D     , KC_V     ,                            KC_K     , KC_H     , KC_COMM  , KC_DOT   , KC_SLSH  ,
-    KC_NO    , KC_NO  ,KC_NO,LT(2,KC_CAPS_LOCK),LT(5,KC_SPC),KC_TAB,       LT(4, KC_ENT), LT(3,KC_BSPC),KC_NO, KC_NO , KC_NO    , KC_A
+    KC_NO    , KC_NO  ,KC_NO,LT(2,KC_CAPS_LOCK),LT(5,KC_SPC),LT(1,KC_TAB),       LT(4, KC_ENT), LT(3,KC_BSPC),KC_NO, KC_NO , KC_NO    , KC_A
   ),
   // Mouse
   [1] = LAYOUT_universal(
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
-    KC_NO    , KC_NO    , KC_BTN2  , KC_BTN1  , KC_NO    ,                            KC_NO    , KC_RSFT  , KC_RGUI  , KC_RALT  , KC_RCTL  ,
+    KC_NO    , KC_NO    , MS_BTN2  , MS_BTN1  , KC_NO    ,                            KC_NO    , KC_RSFT  , KC_RGUI  , KC_RALT  , KC_RCTL  ,
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,      KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO
   ),
@@ -74,7 +74,17 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 
 void pointing_device_init_user(void) {
-    set_auto_mouse_enable(true); 
+    set_auto_mouse_enable(true);
+}
+
+bool is_mouse_record_user(uint16_t keycode, keyrecord_t* record) {
+    switch(keycode) {
+        case MS_BTN1:
+        case MS_BTN2:
+            return true;
+        default:
+            return false;
+    }
 }
 
 const uint16_t PROGMEM esc[] = {LCTL_T(KC_A), RCTL_T(KC_O), COMBO_END};
