@@ -73,6 +73,10 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
+void pointing_device_init_user(void) {
+    set_auto_mouse_enable(true); 
+}
+
 const uint16_t PROGMEM esc[] = {LCTL_T(KC_A), RCTL_T(KC_O), COMBO_END};
 combo_t key_combos[] = {
     COMBO(esc, KC_ESC),
