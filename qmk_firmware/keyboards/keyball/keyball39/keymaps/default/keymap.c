@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // Mouse
   [1] = LAYOUT_universal(
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
-    KC_NO    , KC_NO    , MS_BTN2  , MS_BTN1  , KC_NO    ,                            KC_NO    , KC_RSFT  , KC_RGUI  , KC_RALT  , KC_RCTL  ,
+    KC_NO    , KC_NO    , KC_BTN2  , KC_BTN1  , KC_NO    ,                            KC_NO    , KC_RSFT  , KC_RGUI  , KC_RALT  , KC_RCTL  ,
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,                            KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,
     KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    ,      KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO    , KC_NO
   ),
@@ -74,17 +74,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 }
 
 void pointing_device_init_user(void) {
-    set_auto_mouse_enable(true);
-}
-
-bool is_mouse_record_user(uint16_t keycode, keyrecord_t* record) {
-    switch(keycode) {
-        case MS_BTN1:
-        case MS_BTN2:
-            return true;
-        default:
-            return false;
-    }
+    set_auto_mouse_enable(true); 
 }
 
 const uint16_t PROGMEM esc[] = {LCTL_T(KC_A), RCTL_T(KC_O), COMBO_END};
